@@ -1,0 +1,35 @@
+#include <iostream>
+#include <fstream>
+#include <cstring>
+using namespace std;
+
+bool isloggedln() {
+	string username, password, un, pw; 
+
+		cout << "Please enter your username: "
+		cin >> username;
+
+		cout << "Please enter your password: "
+		cin >> password;
+
+		ofstream file;
+		file.open("data" + username + ".txt");
+
+		file << "username: " << username << endl << "password: " << password; 
+		//the data is registered into our file
+		file.close();
+
+		main(); 
+}
+
+if (!status) {
+	cout << "Invalid username and password: " << endl;
+	system("PAUSE");
+	return 0;
+}
+
+else {
+	cout << "Successfully logged in" << endl;
+	system("PAUSE");
+	return 1;
+}
